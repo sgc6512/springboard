@@ -1,0 +1,11 @@
+1. Shows a detailed manual containing descriptions of what the command and it's flags do. You scroll with Enter and get out with Q.
+2. -l uses a long list format which shows more info. -a shows hidden files and folders.
+3. Ctrl + arrow keys
+4. Ctrl + e
+5. Ctrl + a
+6. Ctrl + w
+7. Terminal is the program that runs the shell, the shell is the command line interpreter/interface.
+8. The strict path to a file ie "C:/Users/Me/Documents/File.txt"
+9. The relative path is the path to a file from where you are already. If you were in the Documents directory above the File.txt path would just be /File.txt
+10. A flag is an optional additional command you can use when using the terminal. I've used -a and -l with ls to display more info, and in -r in rm to remove file directories
+11. -r removes the directory and contents of it, -f forces the command to run, and doesn't prompt file deletion
