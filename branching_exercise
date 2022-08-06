@@ -1,0 +1,5 @@
+1. git checkout -b BRANCH_NAME
+2. The way the algorithm processes the merge
+3. git checkout BRANCH_NAME
+4. git branch -d BRANCH_NAME
+5. Different branches modifying the same file on two separate commits
