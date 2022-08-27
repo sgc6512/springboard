@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="title" id="title-input" />
+      <input type="number" name="rating" id="rating-input" />
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      // When we click submit
+      $("#submit").on("click", function (e) {
+        // Prevent the page from refreshing
+        e.preventDefault();
+        // Get the title and rating
+        let title = $("#title-input").val();
+        let rating = $("#rating-input").val();
+        // Only accepts a rating of 0 to 10
+        if (rating < 0 || rating > 10) {
+          rating = "Invalid";
+        }
+        // Create a new div and add the title and rating to it
+        let movie = $("<div>" + title + " / " + rating + "</div>");
+        // To that div append a button which when clicked delets its parent
+        movie.append(
+          $("<button>X</button>").on("click", function (e) {
+            $(this).parent().remove();
+          })
+        );
+        // Then take all this and append it to the body
+        $("body").append(movie);
+      });
+    </script>
+  </body>
+</html>
