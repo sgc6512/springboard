@@ -1,0 +1,35 @@
+
+
+1.
+HTTP determines how you get data from and send data to a server.
+
+2.
+Short for Uniform Resource Locator, a URL is an address to some internet resource.
+
+3.
+Short for Domain Name System, this is a system that takes human-readable URLs and converts them into IP addresses.
+
+4.
+The query string allows you to pass key-value pairs into the URL, often used to provide additional info like search terms
+
+5.
+GET - get some data from the server 
+POST - send some data to the server
+
+6.
+An HTTP request is a request which follows the HTTP protocol
+
+7.
+An HTTP response is a response from a server to a user which follows the HTTP protocol
+
+8.
+Headers provide additional information about the request or the response. IE:
+Request headers: Host, User-Agent, Accept, Cookie, Cache-Control
+Response headers: Content-Type, Last-Modified, Set-Cookie, Cache-Control
+
+9.
+Your browser converts the name into an IP address using DNS
+Your browser makes a request to that IP address, including headers
+The server sends a response
+The browser makes a DOM from that HTML, and finds any other resources needed
+The browser makes separate HTTP requests for those resources and receives response from the server for each
