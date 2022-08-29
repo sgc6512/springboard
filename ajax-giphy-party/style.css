@@ -1,0 +1,18 @@
+body {
+  background-color: darkslategray;
+}
+
+img {
+  padding: 5px;
+}
+
+h1 {
+  color: antiquewhite;
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: block;
+  text-align: center;
+}
