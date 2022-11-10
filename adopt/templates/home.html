@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adoption Agency</title>
+  </head>
+  <body>
+    <h1>Pets</h1>
+    <section>
+      {% for pet in pets %}
+      <div style="display: inline-block">
+        <a href="/{{pet.id}}">
+          <img
+            src="{{pet.photo_url}}"
+            alt="{{pet.name}} Photo"
+            style="
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              padding: 5px;
+              width: 150px;
+              display: block;
+            "
+          />
+        </a>
+        <p style="display: inline-block; margin: 5px 0 5px 5px">
+          {{pet.name}} {% if pet.available == True %}
+          <strong> is available!</strong>
+          {% endif %}
+        </p>
+      </div>
+      {% endfor %}
+    </section>
+    <form action="/add">
+      <button type="submit">Add Pet</button>
+    </form>
+  </body>
+</html>

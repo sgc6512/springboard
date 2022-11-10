@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adoption Agency</title>
+  </head>
+  <body>
+    <h1>{{pet.name}}</h1>
+    <img
+      src="{{pet.photo_url}}"
+      alt="{{pet.name}} Photo"
+      style="padding: 5px; width: 150px; display: block"
+    />
+    <ul>
+      <li>{{pet.species}}</li>
+      <li>{{pet.age}}</li>
+      <li>{{pet.notes}}</li>
+    </ul>
+    <form id="pet-add-form" method="post">
+      {{ form.hidden_tag() }} {% for field in form if field.widget.input_type !=
+      'hidden' %}
+      <p>
+        {{field.label}} {{field}} {% for error in field.errors %} {{ error }} {%
+        endfor %}
+      </p>
+      {% endfor %}
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
